@@ -48,8 +48,8 @@ namespace NSmartProxy
     //+------------------------+   +--------------+
     public class Server
     {
-        public const string USER_DB_PATH = "./nsmart_user.db";
-        public const string SECURE_KEY_FILE_PATH = "./nsmart_sec_key";
+        public string USER_DB_PATH = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "nsmart_user.db");
+        public string SECURE_KEY_FILE_PATH = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "nsmart_sec_key");
 
         protected ClientConnectionManager ConnectionManager = null;
         protected IDbOperator DbOp;
